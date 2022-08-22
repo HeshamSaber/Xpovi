@@ -5,8 +5,11 @@
     <classes>
       <class name="tests.TestTemp">
         <methods>
+          <include name="TearDown"/>
           <include name="setup"/>
+          <include name="Checkout"/>
           <include name="CheckBuyCat"/>
+          <include name="AddToCart"/>
         </methods>
       </class> <!-- tests.TestTemp -->
     </classes>

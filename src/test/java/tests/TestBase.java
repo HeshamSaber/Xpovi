@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase {
@@ -26,5 +27,10 @@ public class TestBase {
 	public static void main(String args[]) {
 		TestBase test = new TestBase();
 		test.setup();
+	}
+
+	@AfterClass
+	public void TearDown() {
+		driver.quit();
 	}
 }

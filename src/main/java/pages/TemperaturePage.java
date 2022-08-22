@@ -19,18 +19,15 @@ public class TemperaturePage {
 		int tempValue = Integer.MIN_VALUE;
 		String GetTempText = driver.findElement(temperatureValue).getText().trim();
 		String[] trimmedText = GetTempText.split(" ");
-		System.out.println("tempv is : " + GetTempText);
 		try {
 			tempValue = Integer.parseInt(trimmedText[0]);
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		}
-		System.out.println("temp is : " + tempValue);
 		return tempValue;
 	}
 
 	public void selectProductCategory(Boolean IsMoisturezer) {
-		System.out.println(IsMoisturezer);
 		if (IsMoisturezer) {
 			driver.findElement(BuyMoisturizersCat).click();
 		} else if (!IsMoisturezer) {
